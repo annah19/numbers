@@ -19,10 +19,13 @@ for num in range(10,100):
 # is dividable with the number
 pos_num = 0 
 for pos_num in range(1,100):
+    # We insert count inside the first for loop to reset it for the current number
     count_div = 0
+    # We need to include the stop range
     for num in range(1,pos_num+1):
         if pos_num % num == 0:
             count_div += 1
+    # If the count is 10 then we found a number that has 10 divisors
     if count_div == 10:
         print(pos_num)
 
